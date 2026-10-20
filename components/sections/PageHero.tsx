@@ -1,9 +1,6 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
-import { clientLogos } from "@/data/content";
-import { Marquee } from "@/components/motion/Marquee";
 import { HeroBackdrop } from "@/components/sections/HeroBackdrop";
 
 type PageHeroProps = {
@@ -56,34 +53,10 @@ export function PageHero({
         </motion.h1>
       </div>
 
-      <motion.div
-        className="relative z-10 border-t border-white/10 py-3.5"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5 }}
-      >
-        <Marquee className="opacity-70">
-          {clientLogos.map((src) => (
-            <div
-              key={src}
-              className="flex h-5 w-[110px] items-center justify-center px-3"
-            >
-              <Image
-                src={src}
-                alt=""
-                width={92}
-                height={20}
-                className="h-5 w-auto brightness-0 invert opacity-80"
-              />
-            </div>
-          ))}
-        </Marquee>
-      </motion.div>
-
       <motion.a
         href="#content"
         aria-label="Прокрутить вниз"
-        className="absolute bottom-[56px] left-1/2 z-20 flex h-10 w-[98px] -translate-x-1/2 items-center justify-center rounded-full border border-accent/50 bg-black/25 backdrop-blur-sm"
+        className="absolute bottom-4 left-1/2 z-20 flex h-10 w-[98px] -translate-x-1/2 items-center justify-center rounded-full border border-accent/50 bg-black/25 backdrop-blur-sm sm:bottom-10"
         animate={{ y: [0, 6, 0] }}
         transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
       >

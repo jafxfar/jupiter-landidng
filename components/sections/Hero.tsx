@@ -4,9 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import type { ReactNode } from "react";
-import { clientLogos, hero, socials } from "@/data/content";
+import { hero, socials } from "@/data/content";
 import { RevealText } from "@/components/motion/RevealText";
-import { Marquee } from "@/components/motion/Marquee";
 import { HeroBackdrop } from "@/components/sections/HeroBackdrop";
 
 const socialIcons: Record<string, ReactNode> = {
@@ -36,23 +35,6 @@ const categoryRows = [
   [hero.categories[0], hero.categories[1]],
   [hero.categories[2], hero.categories[3]],
 ] as const;
-
-function ClientLogoRow({ className = "" }: { className?: string }) {
-  return (
-    <div className={`flex flex-wrap items-center gap-x-6 gap-y-3 ${className}`}>
-      {clientLogos.map((src) => (
-        <Image
-          key={src}
-          src={src}
-          alt=""
-          width={72}
-          height={18}
-          className="h-[14px] w-auto brightness-0 invert opacity-70 md:h-4"
-        />
-      ))}
-    </div>
-  );
-}
 
 export function Hero() {
   return (
@@ -168,8 +150,6 @@ export function Hero() {
                 ))}
               </div>
             </div>
-
-            <ClientLogoRow className="mt-6 hidden min-[1200px]:flex" />
           </motion.div>
 
           <motion.div
@@ -218,30 +198,6 @@ export function Hero() {
         </svg>
       </motion.a>
 
-      {/* <1200: full-width logo ticker */}
-      <motion.div
-        className="relative z-10 mt-auto border-t border-white/10 py-3.5 min-[1800px]:hidden"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.7 }}
-      >
-        <Marquee className="opacity-70">
-          {clientLogos.map((src) => (
-            <div
-              key={src}
-              className="flex h-5 w-[110px] items-center justify-center px-3"
-            >
-              <Image
-                src={src}
-                alt=""
-                width={92}
-                height={20}
-                className="h-5 w-auto brightness-0 invert opacity-80"
-              />
-            </div>
-          ))}
-        </Marquee>
-      </motion.div>
     </section>
   );
 }

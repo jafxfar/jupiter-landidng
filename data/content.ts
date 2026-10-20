@@ -99,7 +99,7 @@ export const projects = [
       { label: "MVP", note: "Первая рабочая версия" },
       { label: "Внутренний продукт", note: "Команда Jupiter" },
     ],
-    image: "/assets/images/featured.png",
+    image: "/assets/images/pages/project-news-cover.png",
   },
 ];
 
@@ -327,14 +327,6 @@ export const contact = {
   email: "hello@jupiter.uz",
   phone: "+998 (90) 000-00-00",
 };
-
-export const clientLogos = [
-  "/assets/logos/client-1.svg",
-  "/assets/logos/client-2.svg",
-  "/assets/logos/client-3.svg",
-  "/assets/logos/client-4.svg",
-  "/assets/logos/client-5.svg",
-];
 
 export const socials = [
   { label: "Facebook", href: "https://facebook.com" },

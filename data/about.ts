@@ -9,8 +9,8 @@ export const aboutPage = {
   ],
   stats: [
     { label: "Запущено проектов", value: 6, suffix: "+" },
-    { label: "Лет опыта", value: 5, suffix: "+" },
-    { label: "Довольных клиентов", value: 20, suffix: "+" },
+    { label: "Лет опыта", value: 2, suffix: "+" },
+    { label: "Довольных клиентов", value: 10, suffix: "+" },
   ],
   passionBadge: "Сделано с огоньком",
   mission: {
